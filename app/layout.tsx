@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Caffeine Survival Calculator",
-  description: "Calculate how much caffeine you need to stay awake for your desired timeframe",
+  description:
+    "Calculate how much caffeine you need to stay awake for your desired timeframe",
 };
 
 export default function RootLayout({
@@ -28,10 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="system" 
-          enableSystem 
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
           disableTransitionOnChange
         >
           {children}
