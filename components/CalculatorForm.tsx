@@ -69,15 +69,16 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
   function handleUnitToggle(checked: boolean) {
     const currentWeight = form.getValues("weight");
     const newUnit = checked ? "kg" : "lb";
-    
+
     // Convert weight value when unit changes
     let newWeight = currentWeight;
     if (newUnit !== form.getValues("weightUnit")) {
-      newWeight = newUnit === "kg" 
-        ? Math.round(currentWeight * 0.453592) 
-        : Math.round(currentWeight * 2.20462);
+      newWeight =
+        newUnit === "kg"
+          ? Math.round(currentWeight * 0.453592)
+          : Math.round(currentWeight * 2.20462);
     }
-    
+
     form.setValue("weightUnit", newUnit);
     form.setValue("weight", newWeight);
     setIsKg(checked);
@@ -100,10 +101,10 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
                   </FormControl>
                   <div className="flex items-center gap-2">
                     <span className="text-sm">lb</span>
-                    <Switch 
-                      checked={isKg} 
-                      onCheckedChange={handleUnitToggle} 
-                      id="unit-toggle" 
+                    <Switch
+                      checked={isKg}
+                      onCheckedChange={handleUnitToggle}
+                      id="unit-toggle"
                     />
                     <span className="text-sm">kg</span>
                   </div>
@@ -126,7 +127,7 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
                   <Input type="number" {...field} />
                 </FormControl>
                 <FormDescription>
-                  How long you've been awake already (in hours).
+                  How long you&apos;ve been awake already (in hours).
                 </FormDescription>
                 <FormMessage />
               </FormItem>
@@ -166,8 +167,12 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
-                    <SelectItem value="Low">Low (rarely consume caffeine)</SelectItem>
-                    <SelectItem value="Moderate">Moderate (regular consumer)</SelectItem>
+                    <SelectItem value="Low">
+                      Low (rarely consume caffeine)
+                    </SelectItem>
+                    <SelectItem value="Moderate">
+                      Moderate (regular consumer)
+                    </SelectItem>
                     <SelectItem value="High">High (heavy consumer)</SelectItem>
                   </SelectContent>
                 </Select>
@@ -179,7 +184,9 @@ export function CalculatorForm({ onSubmit }: CalculatorFormProps) {
             )}
           />
 
-          <Button type="submit" className="w-full">Calculate</Button>
+          <Button type="submit" className="w-full">
+            Calculate
+          </Button>
         </form>
       </Form>
     </div>

@@ -20,7 +20,6 @@ import {
   History,
 } from "lucide-react";
 import { useTheme } from "next-themes";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Home() {

@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { useEffect, useState } from "react";
 import { getCalculationHistory } from "@/lib/calculateCaffeine";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, BarChart4, PieChart, Trash2 } from "lucide-react";
+import { ArrowLeft, Trash2 } from "lucide-react";
 import Link from "next/link";
 import {
   Table,
